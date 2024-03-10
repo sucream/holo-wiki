@@ -1,14 +1,10 @@
-// import { Suspense } from "react";
-import Schedule from "./_components/Schedule";
-import { Suspense } from "react";
+import Link from "next/link";
+import AutoSwiper from "./_components/AutoSwiper";
 
 export default function SchedulePage() {
   return (
-    <div>
-      <h1>Holo Schedule</h1>
-      <Suspense>
-        <Schedule />
-      </Suspense>
+    <div className="flex h-full flex-col items-center justify-center">
+      <AutoSwiper />
     </div>
   );
 }
