@@ -30,9 +30,9 @@ export default function Schedule() {
   return (
     <div>
       {query.isLoading && (
-        <div className="space-y-5">
+        <div className="m-4 space-y-5">
           <Skeleton className="h-4 w-[250px]" />
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[...Array(20)].map((_, i) => (
               <SkeletonCard key={i} />
             ))}
@@ -40,11 +40,11 @@ export default function Schedule() {
         </div>
       )}
       {query.data?.map((dateGroup, idx) => (
-        <div key={idx} className="space-y-5">
-          <div className="m-4 flex justify-center">
+        <div key={idx} className="mb-10 space-y-5">
+          <div className="m-4 flex justify-start ">
             <h3 className="text-2xl font-bold">{dateGroup.displayDate}</h3>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {dateGroup.videoList.map((video) => (
               <div
                 key={video.url}
@@ -69,8 +69,12 @@ export default function Schedule() {
                       className="w-8 rounded-full"
                     />
                   </div>
-                  <div className="flex-1">
-                    <p className="line-clamp-2 text-sm font-medium hover:line-clamp-none">
+                  <div className="flex-1 cursor-default">
+                    <p
+                      title={video.title}
+                      // className="line-clamp-2 text-sm font-medium"
+                      className="line-clamp-1 text-sm font-medium"
+                    >
                       {video.title}
                     </p>
                     <div className="flex flex-row items-center">
