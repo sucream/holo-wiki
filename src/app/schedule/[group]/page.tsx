@@ -11,6 +11,7 @@ export default function ScheduleDetailPage({ params }: { params: Prams }) {
     <div className="mb-4 flex h-full flex-1 flex-col lg:flex-row">
       <Sidebar selectedGroup={params.group} />
       <div className="flex-1 p-4 ">
+        <h1 className="text-center text-2xl font-extrabold">Schedule</h1>
         <Schedule selectedGroup={params.group} />
       </div>
     </div>
