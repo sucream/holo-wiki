@@ -25,7 +25,6 @@ export default async function getSchedules(group: string | null = "1") {
     `${process.env.NEXT_PUBLIC_SCHEDULE_API_URL}/${group}`,
   );
   const data: { dateGroupList: DateGroup[] } = await res.json();
-  console.log(data);
 
   return data.dateGroupList;
 }

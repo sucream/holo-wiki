@@ -8,13 +8,12 @@ export default function Header() {
         <Image
           src={"/hololive.svg"}
           alt="Holo Wiki"
-          width={40}
-          height={40}
-          className="m-2"
+          width={20}
+          height={20}
+          className="m-2 w-10"
         />
         <div className="flex flex-col items-center text-xl font-bold">
-          <span>HOLO</span>
-          <span>WIKI</span>
+          <span>holo wiki</span>
         </div>
       </Link>
       <div className="mx-2 flex flex-grow items-center justify-end space-x-4">
