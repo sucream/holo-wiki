@@ -17,6 +17,9 @@ export default function Header() {
         </div>
       </Link>
       <div className="mx-2 flex flex-grow items-center justify-end space-x-4">
+        <Link href="/wiki" className="flex items-center">
+          <span className="text-lg font-bold">Wiki</span>
+        </Link>
         <Link href="/schedule" className="flex items-center">
           <span className="text-lg font-bold">Schedule</span>
         </Link>

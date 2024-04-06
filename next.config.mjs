@@ -1,5 +1,8 @@
+// import withMDX from '@next/mdx';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
@@ -20,8 +23,17 @@ const nextConfig = {
         port: '',
         pathname: '/image/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'static.miraheze.org',
+        port: '',
+        pathname: '/hololivewiki/**',
+      }
     ],
   },
 };
 
+// export default withMDX(nextConfig);
 export default nextConfig;
+ 
+// module.exports = withMDX(nextConfig)
